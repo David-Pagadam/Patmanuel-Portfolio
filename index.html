@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patmanuel Nhyira Yaafi - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- COVER PAGE -->
+  <div id="cover-page" class="cover-page">
+    <div class="cover-content">
+      <div class="cover-photos">
+        <img src="images/Patmanuel.jpg" alt="Profile Photo" class="cover-photo" />
+        <img src="images/presec_logo.JPG" alt="PRESEC Crest" class="cover-logo" />
+      </div>
+      <h1>Patmanuel Nhyira Yaafi</h1>
+      <h3>Undergraduate Application Portfolio</h3>
+      <p class="cover-school">Presbyterian Boys’ Secondary School, Legon</p>
+      <p class="cover-year">Academic Year: 2024 / 2025</p>
+      <p class="cover-tagline">“Passionate about Science, Mathematics, and Innovation.”</p>
+    </div>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div id="toc-page" class="toc-page">
+    <h1>Table of Contents</h1>
+    <ol id="toc-list" class="toc-list"></ol>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Patmanuel Nhyira Yaafi</h1>
+    <p>Undergraduate Applicant | Science & Mathematics Enthusiast</p>
+    <button id="downloadBtn" class="btn download-btn" onclick="downloadPortfolio()">📄 Download Portfolio as PDF</button>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#documents">Documents</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- SECTIONS -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated and passionate student from Presbyterian Boys’ Secondary School, Legon.
+      My interests lie in Science, Mathematics, and Engineering, and I enjoy using creative problem-solving
+      to explore how these fields impact our world. Through active participation in academic clubs, I have
+      developed teamwork, leadership, and analytical thinking skills that shape my academic journey.
+    </p>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements & Certificates</h2>
+
+    <div class="certificate">
+      <h3>Science and Mathematics Club – Certificate of Honour (2024/2025)</h3>
+      <p>
+        Recognized for outstanding contribution, hard work, and service to the scientific community.
+        Awarded by the Assistant Headmistress of PRESEC, Legon.
+      </p>
+    </div>
+
+    <div class="certificate">
+      <h3>MISE Club – Certificate of Merit</h3>
+      <p>
+        Honoured for commitment and excellence in Mathematics, Information Science, and Engineering
+        activities, promoting scientific curiosity and teamwork.
+      </p>
+    </div>
+
+    <div class="certificate">
+      <h3>PRESEC Club – Membership Certificate</h3>
+      <p>
+        Acknowledged as a valued and active member, demonstrating enthusiasm, dedication, and leadership
+        in academic club activities.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Analytical and Critical Thinking</li>
+      <li>Teamwork and Collaboration</li>
+      <li>Scientific Research and Problem Solving</li>
+      <li>Leadership and Initiative</li>
+    </ul>
+  </section>
+
+  <section id="documents">
+    <h2>Official Documents</h2>
+    <p>Browse through my verified certificates below. Click any image to view in fullscreen or open the PDF.</p>
+
+    <div class="gallery">
+      <div class="card">
+        <img src="images/certificat01.jpg" alt="PRESEC Membership Certificate" onclick="openLightbox(this)" />
+        <h3>PRESEC Club Membership</h3>
+        <a href="documents/certificat01.pdf" target="_blank" class="btn">View Full PDF</a>
+      </div>
+
+      <div class="card">
+        <img src="images/certificate02.jpg" alt="Science and Mathematics Club Certificate" onclick="openLightbox(this)" />
+        <h3>Science & Mathematics Club</h3>
+        <a href="documents/certificate02.pdf" target="_blank" class="btn">View Full PDF</a>
+      </div>
+
+      <div class="card">
+        <img src="images/certificate03.jpg" alt="MISE Club Certificate" onclick="openLightbox(this)" />
+        <h3>MISE Club Merit Certificate</h3>
+        <a href="documents/certificate03.pdf" target="_blank" class="btn">View Full PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:patmanuel.yaafi@gmail.com">patmanuel.yaafi@gmail.com</a></p>
+    <p>School: Presbyterian Boys’ Secondary School, Legon</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Patmanuel Nhyira Yaafi. All rights reserved.</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" alt="Certificate Preview">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
