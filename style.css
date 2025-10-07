@@ -179,3 +179,49 @@ footer {
   footer { background: none; color: #004aad; }
   .toc-list a { color: black; }
 }
+/* Contact form feedback popup */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 20px auto;
+}
+form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+form input, form textarea {
+  padding: 10px;
+  border: 2px solid #004aad;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+form input:focus, form textarea:focus {
+  border-color: #007bff;
+}
+form button {
+  margin-top: 15px;
+  background: #004aad;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #007bff;
+}
+.form-status {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.form-status.success {
+  color: #0a991a;
+  background: #e7ffe7;
+  padding: 10px;
+  border-radius: 5px;
+}

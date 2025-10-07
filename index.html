@@ -120,11 +120,30 @@
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:patmanuel.yaafi@gmail.com">patmanuel.yaafi@gmail.com</a></p>
-    <p>School: Presbyterian Boys’ Secondary School, Legon</p>
-  </section>
+  <section id="contact" class="reveal">
+  <h2>Contact Me</h2>
+
+  <!-- Basic Info -->
+  <p>Email: <a href="mailto:patmanuel.yaafi@gmail.com">patmanuel.yaafi@gmail.com</a></p>
+  <p>School: Presbyterian Boys’ Secondary School, Legon</p>
+
+  <!-- Contact Form -->
+  <form id="contactForm">
+    <label>Name</label>
+    <input type="text" name="name" required />
+
+    <label>Email</label>
+    <input type="email" name="email" required />
+
+    <label>Message</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+  <!-- Feedback Message -->
+  <div id="form-status" class="form-status"></div>
+</section>
 
   <!-- FOOTER -->
   <footer>

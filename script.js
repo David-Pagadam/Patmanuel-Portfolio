@@ -39,3 +39,38 @@ function generateTOC(estimatePages = false) {
     tocList.appendChild(li);
   });
 }
+// -------- Contact Form (AJAX + Popup Confirmation) --------
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const statusDiv = document.getElementById("form-status");
+
+  if (!form) return; // Safety check
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    statusDiv.innerHTML = "⏳ Sending message...";
+    const formData = new FormData(form);
+
+    // Replace with your Formspree endpoint
+    const formURL = "https://formspree.io/f/mldpwjbz";
+
+    try {
+      const response = await fetch(formURL, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        form.reset();
+        statusDiv.innerHTML = "✅ Message sent successfully!";
+        statusDiv.classList.add("success");
+        setTimeout(() => (statusDiv.innerHTML = ""), 4000);
+      } else {
+        statusDiv.innerHTML = "⚠️ Something went wrong. Please try again.";
+      }
+    } catch (error) {
+      statusDiv.innerHTML = "❌ Network error. Please check your connection.";
+    }
+  });
+});
